@@ -1,20 +1,18 @@
 import React from "react";
 import "./Card.css";
 
-export default function Card() {
+export default function Card({img_url, name, desc, link}) {
 	return (
 		<div className="card">
 			<img
-				src="https://cdn.britannica.com/79/232779-050-6B0411D7/German-Shepherd-dog-Alsatian.jpg"
-				alt=""
+				src={img_url}
+				alt={name}
 			/>
 			<h4 className="name">german</h4>
-			<p className="description">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-				Facilis, dolorum? Debitis, sequi.
+			<p className="description">{desc}
 			</p>
 
-			<a href="">More</a>
+			<a href={link}>More</a>
 		</div>
 	);
 }
