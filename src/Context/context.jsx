@@ -3,11 +3,10 @@ import { createContext, useState } from "react";
 export const Context = createContext(null);
 
 export function ContextProvider(props) {
-	const [data, setData] = useState(4);
+	const [data, setData] = useState([]);
 
-	async function fetchData(params) {
-		const url =
-			"https://dog-breeds2.p.rapidapi.com/dog_breeds/breed/German";
+	async function fetchData(breed_name) {
+		const url = `https://dog-breeds2.p.rapidapi.com/dog_breeds/breed/${breed_name}`;
 		const options = {
 			method: "GET",
 			headers: {
@@ -17,13 +16,9 @@ export function ContextProvider(props) {
 			},
 		};
 
-		try {
-			const response = await fetch(url, options);
-			const result = await response.json();
-			setData(result);
-		} catch (error) {
-			console.error(error);
-		}
+		const response = await fetch(url, options);
+		const result = await response.json();
+		setData(result);
 	}
 
 	return (

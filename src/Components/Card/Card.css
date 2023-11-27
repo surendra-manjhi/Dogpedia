@@ -1,12 +1,27 @@
 .card {
 	padding: 1rem;
 
-	width: 18rem;
+	width: 20rem;
 
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 8px;
+
+	background: rgba(207, 201, 243, 0.3);
+
+	list-style: none;
 }
 
 img {
 	width: 100%;
+	border-radius: 8px;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.name {
+	margin: 0.4rem 0;
 }

@@ -1,17 +1,33 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import "./App.css";
 import Card from "./Components/Card/Card";
 import { Context } from "./Context/context";
 
 function App() {
-	const context = useContext(Context);
+	const { data, fetchData } = useContext(Context);
 
-	console.log(context);
+	useEffect(() => {
+		fetchData("bul");
+	}, []);
+
+	console.log(data);
 
 	return (
 		<div className="App">
-			<h1>DOG.</h1>
-			<Card />
+			<h1>D🐶G</h1>
+			<ul>
+				{data.map((el) => {
+					return (
+						<Card
+							key={el.id}
+							img_url={el.img}
+							name={el.breed}
+							origin={el.origin}
+							link={el.url}
+						/>
+					);
+				})}
+			</ul>
 		</div>
 	);
 }
