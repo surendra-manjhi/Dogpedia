@@ -17,3 +17,14 @@ li {
 
 	display: inline-block;
 }
+
+.search-ctn {
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+
+button {
+	width: 2.2rem;
+	cursor: pointer;
+}
