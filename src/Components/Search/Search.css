@@ -7,6 +7,9 @@
 
 	font-size: 1rem;
 
-	border: none;
+	border: 2px solid grey;
 	border-radius: 4px;
+
+	background: rgba(123, 117, 117, 0.1);
+	color: white;
 }
