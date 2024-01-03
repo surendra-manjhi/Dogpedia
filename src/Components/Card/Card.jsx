@@ -1,9 +1,9 @@
 import React from "react";
 import "./Card.css";
 
-export default function Card({ key, img_url, name, origin, link }) {
+export default function Card({ img_url, name, origin, link }) {
 	return (
-		<li key={key} className="card">
+		<li className="card">
 			<div className="img-ctn">
 				<img src={img_url} alt={name} />
 			</div>
